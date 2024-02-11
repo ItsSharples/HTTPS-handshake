@@ -1,0 +1,19 @@
+# HTTPS Handshake
+
+This is me exploring the components of a HTTPS Handshake.
+
+This is NOT an implementation of TLS that should be expected to be fully compliant (will likely only support a few hardcoded Algorithms) or able to provide data past the Handshake.
+
+Currently it supports
+- ClientHello
+- ServerHello (Kind of)
+
+Next Steps would be Certificate Generation/Storage, as HTTPS requires a Certificate to be shared immediately after ServerHello.
+
+ServerHello I am also not completely confident with, as Extensions are poorly documented online, so I do not know what Extensions are needed in this Modern Web.
+
+## Notes
+
+Python is a really bad language to implement a data-oriented system.
+
+HelloRequest is conceptually something that happens before ClientHello, but doesn't seem to be part of the Handshake?
